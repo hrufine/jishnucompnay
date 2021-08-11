@@ -8,7 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { UiModule } from '@jishnucompnay/ui';
-
+import { AccordionModule } from 'primeng/accordion';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 const routes:Routes = [
   {
     path:'',
@@ -19,9 +20,10 @@ const routes:Routes = [
     component:ProductListComponent
   }
 ];
+
 @NgModule({
   declarations: [AppComponent, HomePageComponent, ProductListComponent, HeaderComponent, FooterComponent],
-  imports: [BrowserModule,RouterModule.forRoot(routes),UiModule],
+  imports: [BrowserModule,BrowserAnimationsModule,RouterModule.forRoot(routes),UiModule,AccordionModule,],
   providers: [],
   bootstrap: [AppComponent],
 })
