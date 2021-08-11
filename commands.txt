@@ -1,0 +1,5 @@
+nx generate component pages/home-page --project=ngshop --dry-run
+
+nx g @nrwl/workspace:lib ui --dry-run
+
+ng generate @schematics/angular:component --name=slider --project=ui --style=scss --export --skipTests --no-interactive
